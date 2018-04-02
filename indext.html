@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel=stylesheet href="assets/style.css">
+</head>
+<body>
+<div id="floating-panel">
+    <input id="address" type="textbox" value="Atlanta, GA">
+    <input id="submit" type="button" value="Geocode">
+</div>
+<div id="map"></div>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2e-onYfxF0Q1ST_ndCFMC6kzPGYCPA4&libraries=places&callback=initMap">
+</script>
+<script src="assets/logic.js"></script>
+</body>
+</html>
