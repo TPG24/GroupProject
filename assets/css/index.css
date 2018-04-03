@@ -1,0 +1,51 @@
+body {
+  background: url('../images/food-phone.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.nav-wrapper {
+  background: black;
+}
+#logo {
+  font-family: Shrikhand, cursive;
+  color: #ff5722;
+}
+.sub-menu {
+  font-family: Special Elite, serif;
+}
+#title {
+  font-family: Shrikhand, cursive;
+}
+.black-text:hover {
+  color: white;
+}
+#phone {
+  margin-top: 5em;
+  font-family: Special Elite, serif;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-fixed {
+    background: #ff5722;
+  }
+  .nav-wrapper {
+    background: #ff5722;
+  }
+  #logo {
+    background: #ff5722;
+    color: black;
+    width: 100%;
+  }
+  #mobile-card {
+    margin-top: 15em;
+  }
+  #phone {
+    margin-top: 0;
+    background: #fff3e0cc;
+    border: solid 5px #ff5722;
+    color: black;
+    font-weight: bold;
+  }
+}

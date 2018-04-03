@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookery&Delivery</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Alfa+Slab+One|Baloo|Shrikhand|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" integrity="sha256-lJMsOpLg+Hdzs297wkRxAhSlJdXcuHHyo/JoB4uI7uw="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/recipe.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js" integrity="sha256-Cxf2osSjVdgIUDXd8CR70LjMnQD0TA908QL1v00EtMY="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--navbar all media-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo" id="logo">Cookery & Delivery</a>
+                <ul class="right hide-on-med-and-down black">
+                    <li>
+                        <a href="recipe.html" class="sub-menu">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="restaurant.html" class="sub-menu">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="favorites.html" class="sub-menu">Favorites</a>
+                    </li>
+                </ul>
+            </div>
+            <!--navbar addition for small media-->
+            <div class="nav-wrapper hide-on-med-and-up">
+                <ul class="left hide-on-med-and-up">
+                    <li>
+                        <a href="recipe.html" class="sub-menu">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="restaurant.html" class="sub-menu">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="favorites.html" class="sub-menu">Favorites</a>
+                    </li>
+                </ul>
+        </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <!--recipe search input-->
+                <form class="col s12">
+                    <div class="card" id="recipe-search">
+                        <div class="row">
+                            <!--empty div on large media-->
+                            <div class="col s0 m0 l1"></div>
+                            <!--text input for search-->
+                            <div class="input-field col s12 m6 l6">
+                                <input placeholder="What would you like to cook?" id="recipe-input" type="text" class="validate">
+                                <label for="recipe" class="black-text"></label>
+                            </div>
+                            <!--search button-->
+                            <div class="col s12 m3 l2">
+                                <button id="search" class="btn waves-effect waves-light grey lighten-1 black-text" type="submit" name="action">
+                                    <h5>search</h5>
+                                </button>
+                            </div>
+                            <!--clear button-->
+                            <div class="col s12 m3 l2">
+                                <button id="clear" class="btn waves-effect waves-light grey lighten-1 black-text" type="submit" name="action">
+                                    <h5>clear</h5>
+                                </button>
+                            </div>
+                        </div>
+                </form>
+                </div>
+                <!--recipe cards example only-to be created in jquery-->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!--recipe cards example only-to be created in jquery-->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l3">
+                        <div class="card small">
+                            <a class="waves-effect waves-light btn deep-orange">add to favorites
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src=""></script>
+
+</body>
+
+</html>
