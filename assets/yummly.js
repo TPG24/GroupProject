@@ -1,42 +1,53 @@
-var recipes = ["Chicken Parm", "Lasagna"];
+// var recipes = ["Chicken Parm", "Lasagna"];
+var recipes = [];
 
 function displayRecipeInfo() {
-
+ console.log(this);
     var recipe = $(this).attr("data-name");
     var queryURL = "https://api.yummly.com/v1/api/recipes?_app_id=767cd386&_app_key=" +
-        "82a2adbda2618297314b0af2e488f406&q=" + recipe + "&requirePictures=true&maxResult=8&start=8";
+        "82a2adbda2618297314b0af2e488f406&q=" + recipe + "&requirePictures=true&maxResult=8&start=8&source=true";
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        var recipeDiv = $("<div class='recipe'>");
 
-        var dishName = response.name;
+        response.matches.forEach( function (item)  {
+            var recipeDiv = $("<div class='recipe'>");
+
+        var dishName = item.recipeName;
 
         var pOne = $("<p>").text("Name: " + dishName);
 
         recipeDiv.append(pOne);
 
-        var numberServings = response.numberOfServings;
+        if (item.numberOfServings) {
+            var numberServings = item.numberOfServings;
 
-        var pTwo = $("<p>").text("Servings: " + numberServings);
+            var pTwo = $("<p>").text("Servings: " + numberServings);
 
-        recipeDiv.append(pTwo);
+            recipeDiv.append(pTwo);
+        }
 
-        var ingredients = response.ingredientLines;
+        var ingredients = item.ingredients;
 
         var pThree = $("<p>").text("Ingredients: " + ingredients);
 
         recipeDiv.append(pThree);
 
-        var time = response.totalTime;
+        var creator = item.sourceDisplayName;
 
-        var pFour = $("<p>").text("Total Time : " + time);
+        var pFour = $("<p>").text("Created By : " + creator);
 
         recipeDiv.append(pFour);
 
-        var imageURL = response.images;
+        var source = item.sourceRecipeUrl;
+
+        var pFive = $("<p>").text("Url: " + source);
+
+        recipeDiv.append(pFive);
+
+        var imageURL = item.smallImageUrls[0];
 
         var image = $("<img>").attr("src", imageURL);
 
@@ -45,6 +56,10 @@ function displayRecipeInfo() {
 
         // $("#recipe-view").text(JSON.stringify(response));
         $("#recipe-view").append(recipeDiv);
+
+    });
+
+        console.log(response.matches);
 
 
 
