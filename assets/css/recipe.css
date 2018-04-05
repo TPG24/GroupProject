@@ -1,0 +1,61 @@
+body {
+  background: url('../images/ingredients.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.nav-wrapper {
+  background: black;
+}
+#logo {
+  font-family: Shrikhand, cursive;
+  color: #ff5722;
+}
+.sub-menu {
+  font-family: Special Elite, serif;
+}
+#title {
+  font-family: Shrikhand, cursive;
+}
+#recipe-search {
+  background: #ff5722;
+  font-family: Special Elite, serif;
+}
+::placeholder {
+  color: black;
+  font-size: 1.25em;
+}
+::type {
+  font-size: 1.5em;
+}
+button {
+  margin-top: 1.5em;
+}
+.btn {
+  font-family: Special Elite, serif;
+  color: black;
+}
+.card::small {
+  font-family: Special Elite, serif;
+  color: black;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-fixed {
+    background: #ff5722;
+  }
+  .nav-wrapper {
+    background: #ff5722;
+  }
+  #logo {
+    background: #ff5722;
+    color: black;
+    width: 100%;
+  }
+  #search {
+    margin-left: 6em;
+  }
+  #clear {
+    margin-left: 6.5em;
+  }
+}

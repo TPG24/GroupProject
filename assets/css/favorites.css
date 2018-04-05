@@ -1,0 +1,48 @@
+body {
+  background: url('../images/pasta.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.nav-wrapper {
+  background: black;
+}
+#logo {
+  font-family: Shrikhand, cursive;
+  color: #ff5722;
+}
+.sub-menu {
+  font-family: Special Elite, serif;
+}
+.table-head {
+  font-family: Special Elite, serif;
+  font-size: 1.5em;
+}
+#table-body {
+  font-family: Special Elite, serif;
+  font-size: 1.25em;
+}
+.delete {
+  background: #ff5722;
+  color: black;
+  font-family: Special Elite, serif;
+  margin-right: 2em;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-fixed {
+    background: #ff5722;
+  }
+  .nav-wrapper {
+    background: #ff5722;
+  }
+  #logo {
+    background: #ff5722;
+    color: black;
+    width: 100%;
+  }
+  .delete {
+    width: 7em;
+    margin-right: 0;
+  }
+}

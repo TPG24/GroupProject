@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookery&Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" integrity="sha256-lJMsOpLg+Hdzs297wkRxAhSlJdXcuHHyo/JoB4uI7uw="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Alfa+Slab+One|Baloo|Shrikhand|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/restaurant.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js" integrity="sha256-Cxf2osSjVdgIUDXd8CR70LjMnQD0TA908QL1v00EtMY="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--navbar all media-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo" id="logo">Cookery & Delivery</a>
+                <ul class="right hide-on-med-and-down black">
+                    <li>
+                        <a href="recipe.html" class="sub-menu">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="restaurant.html" class="sub-menu">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="favorites.html" class="sub-menu">Favorites</a>
+                    </li>
+                </ul>
+            </div>
+            <!--navbar addition for small media-->
+            <div class="nav-wrapper hide-on-med-and-up">
+                <ul class="left hide-on-med-and-up">
+                    <li>
+                        <a href="recipe.html" class="sub-menu">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="restaurant.html" class="sub-menu">Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="favorites.html" class="sub-menu">Favorites</a>
+                    </li>
+                </ul>
+        </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <!--container for map-->
+                <div class="col s12 m8 l8">
+                    <div class="card medium" id="map">
+                    </div>
+                </div>
+                <!--input form for map search-->
+                <form class="col s12 m4 l4">
+                    <div class="card grey lighten-1" id="rest-search">
+                        <!--zip code search input-->
+                        <div class="row">
+                            <div class="col s2"></div>
+                            <div class="input-field col s8">
+                                <input placeholder="Zip Code" id="zip-code" type="text" class="validate">
+                                <label for="zip-code" class="black-text"></label>
+                            </div>
+                        </div>
+                        <!--food type search input-->
+                        <div class="row">
+                            <div class="col s2"></div>
+                            <div class="input-field col s8">
+                                <input placeholder="Food Type" id="food-type" type="text" class="validate">
+                                <label for="food-type" class="black-text"></label>
+                            </div>
+                        </div>
+                        <!--submit button for search-->
+                        <div class="row">
+                            <div class="col s3 m2 l3"></div>
+                            <div class="col s4">
+                                <button id="search-rest" class="btn waves-effect waves-light deep-orange black-text" type="submit" name="action">
+                                    <h5>search</h5>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="assets/javascript/google.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-MhjO7p63Ic45j9tGVI7FGdyCSH1NqqY&callback=initMap&libraries=places">
+        </script>
+
+</body>
+
+</html>
