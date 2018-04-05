@@ -1,72 +1,91 @@
 // var recipes = ["Chicken Parm", "Lasagna"];
-var recipes = [];
+//var recipes = [];
 
-function displayRecipeInfo() {
- console.log(this);
-    var recipe = $(this).attr("data-name");
-    var queryURL = "https://api.yummly.com/v1/api/recipes?_app_id=767cd386&_app_key=" +
-        "82a2adbda2618297314b0af2e488f406&q=" + recipe + "&requirePictures=true&maxResult=8&start=8&source=true";
+
+function displayRecipeInfo(recipe) {
+    console.log(this);
+    // var recipe = $(this).attr("data-name");
+    var queryURL = "https://api.yummly.com/v1/api/recipes?_app_id=309f5cb2&_app_key=" +
+        "6f553c1834e2e101ee5e1fb2d12d7ff6&q=" + recipe + "&requirePictures=true&maxResult=8&start=0";
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
 
-        response.matches.forEach( function (item)  {
+        response.matches.forEach(function (item) {
             var recipeDiv = $("<div class='recipe'>");
 
-        var dishName = item.recipeName;
+            var dishName = item.recipeName;
 
-        var pOne = $("<p>").text("Name: " + dishName);
+            var pOne = $("<p>").text("Name: " + dishName);
 
-        recipeDiv.append(pOne);
+            recipeDiv.append(pOne);
 
-        if (item.numberOfServings) {
-            var numberServings = item.numberOfServings;
+            if (item.numberOfServings) {
+                var numberServings = item.numberOfServings;
 
-            var pTwo = $("<p>").text("Servings: " + numberServings);
+                var pTwo = $("<p>").text("Servings: " + numberServings);
 
-            recipeDiv.append(pTwo);
-        }
+                recipeDiv.append(pTwo);
+            }
 
-        var ingredients = item.ingredients;
+            var ingredients = item.ingredients;
 
-        var pThree = $("<p>").text("Ingredients: " + ingredients);
+            var pThree = $("<p>").text("Ingredients: " + ingredients);
 
-        recipeDiv.append(pThree);
+            recipeDiv.append(pThree);
 
-        var creator = item.sourceDisplayName;
+            var creator = item.sourceDisplayName;
 
-        var pFour = $("<p>").text("Created By : " + creator);
+            var pFour = $("<p>").text("Created By : " + creator);
 
-        recipeDiv.append(pFour);
+            recipeDiv.append(pFour);
+            //
+            // var source = item.sourceRecipeUrl;
+            //
+            // var pFive = $("<p>").text("Url: " + source);
+            //
+            // recipeDiv.append(pFive);
 
-        var source = item.sourceRecipeUrl;
+            console.log('item', item);
+            var recipeID = item.id;
+            var url = "http://api.yummly.com/v1/api/recipe/" + recipeID + "?_app_id=309f5cb2&_app_key=6f553c1834e2e101ee5e1fb2d12d7ff6";
 
-        var pFive = $("<p>").text("Url: " + source);
+            $.ajax({
+                url: url,
+                method: "GET"
+            }).then(function (response) {
+                console.log('recipe for id', recipeID, response);
+                var chef = response.source.sourceRecipeUrl;
+                var pFive = $("<a>").attr('href', chef).text('Click for Recipe');
+                pFive.attr("target", "_blank");
+                // var pFive = $("<p>").text("Url: " + chef);
+                recipeDiv.append(pFive);
+            })
 
-        recipeDiv.append(pFive);
-
-        var imageURL = item.smallImageUrls[0];
-
-        var image = $("<img>").attr("src", imageURL);
-
-        recipeDiv.append(image);
 
 
-        // $("#recipe-view").text(JSON.stringify(response));
-        $("#recipe-view").append(recipeDiv);
 
-    });
+            var imageURL = item.smallImageUrls[0];
+
+            var image = $("<img>").attr("src", imageURL);
+
+            recipeDiv.append(image);
+
+
+            // $("#recipe-view").text(JSON.stringify(response));
+            $("#recipe-view").append(recipeDiv);
+
+        });
 
         console.log(response.matches);
-
-
 
 
         // renderButtons();
     });
 }
+
 
 function renderButtons() {
 
@@ -92,18 +111,19 @@ function renderButtons() {
 }
 
 // This function handles events where one button is clicked
-$("#add-recipe").on("click", function(event) {
+$("#add-recipe").on("click", function (event) {
     event.preventDefault();
-
+    $("#recipe-view").empty();
     // This line grabs the input from the textbox
     var recipe = $("#recipe-input").val().trim();
 
     // Adding the recipe from the textbox to our array
-    recipes.push(recipe);
-    console.log(recipes);
+    // recipes.push(recipe);
+    console.log(recipe);
+
 
     // Calling renderButtons which handles the processing of our recipe array
-    renderButtons();
+    displayRecipeInfo(recipe);
 });
 
 // Function for displaying the recipe info
