@@ -95,7 +95,7 @@ function clearMarkers(markers) {
 // accepts user input when Search button is clicked
 $(document).on("click", "#search-rest", function(){
     event.preventDefault();
-    codeAddress();
+    // codeAddress();
     zipCode= $("#zip-code").val();
     foodType = $("#food-type").val();
     center = {lat: 33.7490, lng: -84.3880};
