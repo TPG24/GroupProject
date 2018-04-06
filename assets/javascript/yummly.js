@@ -1,5 +1,5 @@
 // var recipes = ["Chicken Parm", "Lasagna"];
-//var recipes = [];
+var recipes = [];
 
 
 function displayRecipeInfo(recipe) {
@@ -14,13 +14,27 @@ function displayRecipeInfo(recipe) {
     }).then(function (response) {
 
         response.matches.forEach(function (item) {
-            var recipeDiv = $("<div class='recipe'>");
+            var recipeDiv = $("<div class='card'>");
+
+            var createFav = $("<a>").addClass("waves-effect waves-light btn deep-orange fav-recipe");
+            var pTen = createFav.text("add to favorites");
+            recipeDiv.append(pTen);
 
             var dishName = item.recipeName;
 
-            var pOne = $("<p>").text("Name: " + dishName);
+            var pOne = $("<h5>").text(dishName);
 
             recipeDiv.append(pOne);
+
+
+
+            var imageURL = item.smallImageUrls[0];
+
+            var image = $("<img>").attr("src", imageURL);
+
+            recipeDiv.append(image);
+
+
 
             if (item.numberOfServings) {
                 var numberServings = item.numberOfServings;
@@ -30,10 +44,11 @@ function displayRecipeInfo(recipe) {
                 recipeDiv.append(pTwo);
             }
 
-            var ingredients = item.ingredients;
+            var ingredients = item.ingredients.map(ingredient => ("  " + `${ingredient}`));
 
-            var pThree = $("<p>").text("Ingredients: " + ingredients);
+            var pThree = $("<p>").html("<span class='heading6'>Ingredients:</span> " + ingredients);
 
+            // recipeDiv.append("Ingredients: ");
             recipeDiv.append(pThree);
 
             var creator = item.sourceDisplayName;
@@ -60,22 +75,22 @@ function displayRecipeInfo(recipe) {
                 var chef = response.source.sourceRecipeUrl;
                 var pFive = $("<a>").attr('href', chef).text('Click for Recipe');
                 pFive.attr("target", "_blank");
+                pFive.addClass("waves-effect waves-light btn deep-orange");
                 // var pFive = $("<p>").text("Url: " + chef);
                 recipeDiv.append(pFive);
             })
 
+            // var createFav = $("<a>").addClass("waves-effect waves-light btn deep-orange fav-recipe");
+            // var pTen = createFav.text("add to favorites");
+            // recipeDiv.append(pTen);
 
 
 
-            var imageURL = item.smallImageUrls[0];
 
-            var image = $("<img>").attr("src", imageURL);
-
-            recipeDiv.append(image);
 
 
             // $("#recipe-view").text(JSON.stringify(response));
-            $("#recipe-view").append(recipeDiv);
+            $(".recipe-view").append(recipeDiv);
 
         });
 
@@ -111,9 +126,9 @@ function renderButtons() {
 }
 
 // This function handles events where one button is clicked
-$("#add-recipe").on("click", function (event) {
+$("#search").on("click", function (event) {
     event.preventDefault();
-    $("#recipe-view").empty();
+    $(".card.small").empty();
     // This line grabs the input from the textbox
     var recipe = $("#recipe-input").val().trim();
 

@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51fb9c66-67ef-43a7-be43-2fe6a3c3fc69" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/favorites.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/recipe.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/restaurant.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/food-phone.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/ingredients.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/mushroom-pasta.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/pasta-bowl.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/pasta.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/pizza.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/javascript/favorites.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/javascript/google.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/javascript/logic.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/favorites.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/restaurant.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/assets/css/recipe.css" afterPath="$PROJECT_DIR$/assets/css/recipe.css" />
+      <change beforePath="$PROJECT_DIR$/assets/yummly.js" afterPath="$PROJECT_DIR$/assets/javascript/yummly.js" />
       <change beforePath="$PROJECT_DIR$/recipe.html" afterPath="$PROJECT_DIR$/recipe.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,34 +19,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="recipe.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recipe.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
-              <caret line="83" column="11" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+              <caret line="83" column="11" lean-forward="false" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yummly.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/yummly.js">
+      <file leaf-file-name="recipe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recipe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="1351">
+              <caret line="142" column="29" lean-forward="false" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yummly.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/javascript/yummly.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1522976833769" expanded="true" signature="1399:1637" ph="..." />
+                <marker date="1522976833769" expanded="true" signature="1640:1824" ph="..." />
+                <marker date="1522976833769" expanded="true" signature="1827:2608" ph="..." />
+                <marker date="1522976833769" expanded="true" signature="2402:2608" ph="..." />
+                <marker date="1522976833769" expanded="true" signature="2611:4618" ph="..." />
+                <marker date="1522976833769" expanded="true" signature="3493:4618" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recipe.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/recipe.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,13 +87,21 @@
         <option value="$PROJECT_DIR$/assets/logic.js" />
         <option value="$PROJECT_DIR$/index2.html" />
         <option value="$PROJECT_DIR$/assets/yummly.js" />
-        <option value="$PROJECT_DIR$/recipe.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/recipe.html" />
+        <option value="$PROJECT_DIR$/assets/css/recipe.css" />
+        <option value="$PROJECT_DIR$/assets/javascript/yummly.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -132,6 +139,18 @@
               <item name="GroupProject" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GroupProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupProject" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupProject" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -144,6 +163,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/javascript" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -170,12 +196,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522506638296</updated>
-      <workItem from="1522506639880" duration="41136000" />
+      <workItem from="1522506639880" duration="48580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41136000" />
+    <option name="totallyTimeSpent" value="48580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -219,16 +245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/yummly.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -253,19 +269,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recipe.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state relative-caret-position="537">
+          <caret line="83" column="11" lean-forward="false" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/recipe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="83" column="11" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+        <state relative-caret-position="1351">
+          <caret line="142" column="29" lean-forward="false" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/recipe.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/javascript/yummly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <marker date="1522976833769" expanded="true" signature="1399:1637" ph="..." />
+            <marker date="1522976833769" expanded="true" signature="1640:1824" ph="..." />
+            <marker date="1522976833769" expanded="true" signature="1827:2608" ph="..." />
+            <marker date="1522976833769" expanded="true" signature="2402:2608" ph="..." />
+            <marker date="1522976833769" expanded="true" signature="2611:4618" ph="..." />
+            <marker date="1522976833769" expanded="true" signature="3493:4618" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -21,6 +21,7 @@ body {
 #recipe-search {
   background: #ff5722;
   font-family: Special Elite, serif;
+  padding: 0;
 }
 ::placeholder {
   color: black;
@@ -36,10 +37,25 @@ button {
   font-family: Special Elite, serif;
   color: black;
 }
-.card::small {
+.card {
   font-family: Special Elite, serif;
   color: black;
+  background: #ffffffcc;
+  border: 5px solid #ff5722;
+  padding: 2em;
+
 }
+img {
+  height: 120px;
+  width: 180px;
+}
+.heading6 {
+  font-size: 1.25em;
+}
+.fav-recipe {
+
+}
+
 @media only screen and (max-width: 600px) {
   .navbar-fixed {
     background: #ff5722;
