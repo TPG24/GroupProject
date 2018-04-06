@@ -9,7 +9,7 @@ var markers = [];
 var input;
 var searchBox;
 var geocoder;
-// var zipCode;
+var zipCode;
 var foodType;
 var center;
 // ============================================================================
@@ -29,7 +29,7 @@ function initMap() {
         location: center,
         radius: 8047,
         types: ["restaurant"],
-        // keyword: foodType
+       
    };
 
     service = new google.maps.places.PlacesService(map);
@@ -59,7 +59,7 @@ function initMap() {
 }
 
 function callback(results, status) {
-    // var zipCode = $('#zip-code').val();
+    
     if (status === google.maps.places.PlacesServiceStatus.OK){
         for (var i = 0; i < results.length; i++){
             markers.push(createMarker(results[i]));
@@ -92,17 +92,33 @@ function clearMarkers(markers) {
     markers = [];
 }
 
+function codeAddress(zipCode) {
+    geocoder.geocode( { 'address': zipCode}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            //Got result, center the map and put it out there
+            map.setCenter(results[0].geometry.location);
+            request = {
+                location: results[0].geometry.location,
+                radius: 8047,
+                types: ["restaurant"],
+                keyword: foodType
+            }
+            service.nearbySearch(request, callback);
+        } 
+    });
+}
+
 // accepts user input when Search button is clicked
 $(document).on("click", "#search-rest", function(){
     event.preventDefault();
-    // codeAddress();
+    
     zipCode= $("#zip-code").val();
     foodType = $("#food-type").val();
     center = {lat: 33.7490, lng: -84.3880};
     console.log("click");
-    // console.log(zipCode);
+    console.log(zipCode);
     console.log(foodType);
-    // map.setCenter(zipCode);
+    codeAddress(zipCode);
     clearMarkers(markers);
     request = {
         location: center,
@@ -115,15 +131,3 @@ $(document).on("click", "#search-rest", function(){
 
 });
 
-// function codeAddress(zipCode) {
-//     geocoder.geocode( { 'address': zipCode}, function(results, status) {
-//         if (status == google.maps.GeocoderStatus.OK) {
-//         //Got result, center the map and put it out there
-//         map.setCenter(results[0].geometry.location);
-//         var marker = new google.maps.Marker({
-//             map: map,
-//             position: results[0].geometry.location
-//         });
-//         } 
-//     });
-// }
